@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <!-- Buku Utama -->
+  <path d="M50 50 L300 50 L300 450 L50 450 C70 450 70 50 50 50" 
+        fill="none" 
+        stroke="white" 
+        stroke-width="15"
+        stroke-linejoin="round"/>
+  
+  <!-- Halaman Buku -->
+  <path d="M60 70 L290 70" 
+        stroke="white" 
+        stroke-width="8"/>
+  
+  <path d="M60 430 L290 430" 
+        stroke="white" 
+        stroke-width="8"/>
+  
+  <!-- Salib di Tengah -->
+  <path d="M175 150 L175 350" 
+        stroke="white" 
+        stroke-width="15"/>
+  
+  <path d="M100 250 L250 250" 
+        stroke="white" 
+        stroke-width="15"/>
+  
+  <!-- Pembatas Buku -->
+  <path d="M320 80 L350 80 L350 420 L320 420" 
+        fill="none" 
+        stroke="white" 
+        stroke-width="10"
+        stroke-linejoin="round"/>
+  
+  <!-- Garis Dekoratif -->
+  <path d="M70 100 L280 100" 
+        stroke="white" 
+        stroke-width="5"
+        stroke-opacity="0.5"/>
+  
+  <path d="M70 400 L280 400" 
+        stroke="white" 
+        stroke-width="5"
+        stroke-opacity="0.5"/>
+</svg>

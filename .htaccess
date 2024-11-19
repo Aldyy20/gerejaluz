@@ -1,0 +1,17 @@
+Options -Indexes
+
+ErrorDocument 403 /Gereja3/index.php
+
+<FilesMatch "\.pdf$">
+    Header set Content-Disposition "inline"
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?id=$1
+</IfModule>
+
+<IfModule mod_mime.c>
+    AddType application/pdf .pdf
+</IfModule>
+
