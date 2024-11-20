@@ -47,7 +47,7 @@ img:hover { transform: scale(1.5); }  */
 
 						<div class="feature">
 							<div class="feature_image">
-								<a href="/plugins/pdfjs/web/viewer.html?file=<?php echo urlencode($pdfPath); ?>" target="_blank">
+								<a href="/plugins/pdfjs/web/viewer.html?file=<?php echo urlencode('/servepdf.php?file=' . $data['laporan']); ?>" target="_blank">
 									<img src="laporan/gambar/laporan.png" alt="">
 									<!--<embed src="laporan/pdf/krs.pdf" height="500" width="1000" type="application/pdf"/>-->
 
@@ -57,7 +57,7 @@ img:hover { transform: scale(1.5); }  */
 								<div class="section_title">
 									<!-- <h2><?php echo $data['nama']; ?></h2> -->
 									<h2 style="color: #22354d;">
-										<a href="/plugins/pdfjs/web/viewer.html?file=<?php echo urlencode($pdfPath); ?>" target="_blank" style="color: inherit;">
+										<a href="/plugins/pdfjs/web/viewer.html?file=<?php echo urlencode('/servepdf.php?file=' . $data['laporan']); ?>" target="_blank" style="color: inherit;">
 											<?php echo $data['nama']; ?>
 										</a>
 									</h2>
