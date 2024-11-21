@@ -20,7 +20,7 @@
 							<div class="col">
 								<div class="home_content_inner">
 									<div class="home_title">
-										<h1>GMIT LUZ FATUKOA</h1>
+										<h1 class="outlined-title">GMIT LUZ FATUKOA</h1>
 									</div>
 									<div class="home_text">
 										<!-- <p>GEREJA GMIT MERUPAKAN GERAJA YANG MEMILIKI JEMAAT </p> -->
@@ -44,7 +44,7 @@
 							<div class="col">
 								<div class="home_content_inner">
 									<div class="home_title">
-										<h1>BERITA GEREJA/PELAYANAN</h1>
+										<h1 class="outlined-title">BERITA GEREJA/PELAYANAN</h1>
 									</div>
 									<div class="home_text">
 										<p></p>
@@ -68,7 +68,7 @@
 							<div class="col">
 								<div class="home_content_inner">
 									<div class="home_title">
-										<h1>PROFIL GEREJA</h1>
+										<h1 class="outlined-title">PROFIL GEREJA</h1>
 									</div>
 									<div class="home_text">
 										<p>..</p>

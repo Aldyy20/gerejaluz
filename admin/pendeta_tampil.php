@@ -86,7 +86,7 @@ error_reporting(0); ?>
                 <tr>
                     <td> <?php echo $no; ?></td>
                     <td> <?php echo $data['nama']; ?></td>
-                    <td> <a href="pendeta_edit.php?id=<?php echo $data['kode']; ?> ">LIHAT FOTO</a></td>
+                    <td><a href="#" onclick="showImage('../img/pendeta/<?php echo htmlspecialchars($data['foto']); ?>')">LIHAT FOTO</a></td>
                     <td> <a href="pendeta_edit.php?id=<?php echo base64_encode($data['kode']); ?>">EDIT</a></td>
                     <td> <a href="pendeta_hapus.php?id=<?php echo $data['kode']; ?> ">DELETE</a></td>
                 </tr>
@@ -95,6 +95,12 @@ error_reporting(0); ?>
             }
             ?>
         </table>
+        <div id="imageModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background-color:white; padding:20px; border:1px solid #ccc; z-index:1000;">
+            <span onclick="closeModal()" style="cursor:pointer; float:right;">&times;</span>
+            <img id="modalImage" src="" alt="Image" style="max-width:100%; max-height:500px;">
+        </div>
+
+        <div id="modalOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); z-index:999;"></div>
     </div>
 </div>
 <!--

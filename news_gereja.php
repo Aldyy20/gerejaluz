@@ -6,7 +6,7 @@
 	<title>Berita - LUZ Fatukoa</title>
 </head>
 <div class="home">
-	<div class="home_background parallax-window" data-parallax="scroll" data-image-src="img/gambar/profil.jpg" data-speed="0.8"></div>
+	<div class="home_background parallax-window" data-parallax="scroll" data-image-src="img/gambar/berita.jpg" data-speed="0.8"></div>
 	<div class="home_container">
 		<div class="container">
 			<div class="row">

@@ -695,7 +695,6 @@ section
 {
 	font-size: 69.24px;
 	font-weight: 900;
-	color: #272727;
 	line-height: 1.0398;
 }
 .home_text
@@ -715,6 +714,15 @@ section
 {
 	margin-top: 34px;
 	margin-left: 3px;
+}
+
+.outlined-title {
+	color: #e49929; /* Atur warna teks sesuai keinginan */
+	text-shadow: 
+	-2px -2px 0 #22354d,
+	2px -2px 0 #22354d,
+	-2px 2px 0 #22354d,
+	2px 2px 0 #22354d; /* Outline dengan warna #e49929 */
 }
 
 /*********************************

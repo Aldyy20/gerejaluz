@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 21, 2024 at 11:22 AM
+-- Generation Time: Nov 19, 2024 at 02:52 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -102,6 +102,26 @@ INSERT INTO `tbl_folio` (`kode`, `nama`, `alamat`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_janji`
+--
+
+CREATE TABLE `tbl_janji` (
+  `kode` int(11) NOT NULL,
+  `nama` varchar(100) DEFAULT NULL,
+  `jenis_kelamin` varchar(100) DEFAULT NULL,
+  `email` varchar(30) DEFAULT NULL,
+  `handphone` varchar(20) DEFAULT NULL,
+  `catatan` varchar(100) DEFAULT NULL,
+  `Alamat` varchar(100) DEFAULT NULL,
+  `nominal` int(11) DEFAULT NULL,
+  `status` varchar(20) DEFAULT NULL,
+  `tanggal_regis` date DEFAULT NULL,
+  `tanggal_bayar` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_jemaat`
 --
 
@@ -117,9 +137,9 @@ CREATE TABLE `tbl_jemaat` (
 
 INSERT INTO `tbl_jemaat` (`kode`, `katagori`, `jumlah`) VALUES
 (1, 'Pendeta', 1),
-(2, 'Jemaat Pria', 411),
-(3, 'Jemaat Wanita', 442),
-(4, 'Total Jemaat', 853);
+(2, 'Jemaat Pria', 100),
+(3, 'Jemaat Wanita', 100),
+(4, 'Total Jemaat', 300);
 
 -- --------------------------------------------------------
 
@@ -139,10 +159,10 @@ CREATE TABLE `tbl_laporan` (
 --
 
 INSERT INTO `tbl_laporan` (`kode`, `nama`, `tanggal`, `laporan`) VALUES
-(1, 'Laporan Keuangan Bulan Januari 2024', '2024-11-02', 'myfile2.pdf'),
+(1, 'Laporan Keuangan Bulan Januari 2024', '2024-11-02', 'krs.pdf'),
 (2, 'Laporan Keuangan Bulan Februari 2024', '2024-11-02', 'myfile.pdf'),
-(3, 'Laporan Keuangan Bulan Maret 2024', '2024-11-03', 'myfile3.pdf'),
-(5, 'Laporan Keuangan Bulan November 2024', '2024-11-19', 'myfile4.pdf');
+(3, 'Laporan Keuangan Bulan Maret 2024', '2024-11-03', 'paper.pdf'),
+(5, 'Laporan Keuangan Bulan November 2024', '2024-11-19', 'paper prims dan kruskal.pdf');
 
 -- --------------------------------------------------------
 
@@ -224,7 +244,7 @@ CREATE TABLE `tbl_total` (
 --
 
 INSERT INTO `tbl_total` (`kode`, `total`) VALUES
-(1, 1100000);
+(1, 1000000);
 
 -- --------------------------------------------------------
 
@@ -244,6 +264,27 @@ CREATE TABLE `tbl_user` (
 
 INSERT INTO `tbl_user` (`kode`, `user_name`, `password`) VALUES
 (1, 'admin', '21232f297a57a5a743894a0e4a801fc3');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_video`
+--
+
+CREATE TABLE `tbl_video` (
+  `kode` int(11) NOT NULL,
+  `nama` varchar(100) DEFAULT NULL,
+  `alamat` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `tbl_video`
+--
+
+INSERT INTO `tbl_video` (`kode`, `nama`, `alamat`) VALUES
+(3, 'Video Lagu - Lagu Rohani', 'kvF5QsrR1Z0'),
+(4, 'Lagu-Lau Rohani 2', 'kvF5QsrR1Z0'),
+(5, 'Video Ke COBA', 'cq4SUrLJfN8');
 
 --
 -- Indexes for dumped tables
@@ -265,6 +306,12 @@ ALTER TABLE `tbl_file`
 -- Indexes for table `tbl_folio`
 --
 ALTER TABLE `tbl_folio`
+  ADD PRIMARY KEY (`kode`);
+
+--
+-- Indexes for table `tbl_janji`
+--
+ALTER TABLE `tbl_janji`
   ADD PRIMARY KEY (`kode`);
 
 --
@@ -310,6 +357,12 @@ ALTER TABLE `tbl_user`
   ADD PRIMARY KEY (`kode`);
 
 --
+-- Indexes for table `tbl_video`
+--
+ALTER TABLE `tbl_video`
+  ADD PRIMARY KEY (`kode`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -332,6 +385,12 @@ ALTER TABLE `tbl_folio`
   MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
+-- AUTO_INCREMENT for table `tbl_janji`
+--
+ALTER TABLE `tbl_janji`
+  MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `tbl_jemaat`
 --
 ALTER TABLE `tbl_jemaat`
@@ -347,7 +406,7 @@ ALTER TABLE `tbl_laporan`
 -- AUTO_INCREMENT for table `tbl_mjh`
 --
 ALTER TABLE `tbl_mjh`
-  MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tbl_pendeta`
@@ -366,6 +425,12 @@ ALTER TABLE `tbl_statistik`
 --
 ALTER TABLE `tbl_user`
   MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tbl_video`
+--
+ALTER TABLE `tbl_video`
+  MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

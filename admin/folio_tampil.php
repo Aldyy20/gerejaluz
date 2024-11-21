@@ -88,7 +88,7 @@ error_reporting(0); ?>
 					<td> <?php echo $no; ?></td>
 					<td> <?php echo $data['nama']; ?></td>
 					<td> <?php echo $data['tanggal']; ?></td>
-					<td> <a href="folio_hapus.php?id=<?php echo $data['kode']; ?> ">LIHAT</a></td>
+					<td> <a href="../laporan/pdf/<?php echo $data['laporan']; ?>" target="_blank">LIHAT</a></td>
 					<td> <a href="folio_edit.php?id=<?php echo base64_encode($data['kode']); ?>">EDIT</a></td>
 					<td> <a href="folio_hapus.php?id=<?php echo $data['kode']; ?> ">HAPUS</a></td>
 				</tr>
