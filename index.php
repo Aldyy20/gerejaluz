@@ -180,7 +180,7 @@
 					</div>
 					<!-- About Image -->
 					<div class="col-lg-5 d-flex align-items-center justify-content-center" style="height: 100%;">
-						<div class="about_image"><img src="img/slide/alkitab.png" alt=""></div>
+						<div style="width:200px; height:200px;"><img src="images/alkitab.svg" alt=""></div>
 						<div></div>
 					</div>
 				</div>
