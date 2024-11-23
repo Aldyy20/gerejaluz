@@ -66,9 +66,16 @@ if (isset($_POST["btnedit"])) {
         $nama_foto = strtolower($_FILES['txtgambar']['name']);
         $lokasi_file = $_FILES['txtgambar']['tmp_name'];
 
+        // Path file lama
+        $file_lama = "../img/mjh/" . $data['foto'];
+
         // Pastikan file diupload dengan benar
         if (move_uploaded_file($lokasi_file, "../img/mjh/$nama_foto")) {
-            // Jika upload berhasil, simpan nama file baru ke database
+            // Jika upload berhasil, hapus file lama
+            if (file_exists($file_lama)) {
+                unlink($file_lama); // Menghapus file lama
+            }
+            // Simpan nama file baru ke database
             $foto_file = $nama_foto;
         } else {
             echo "Terjadi kesalahan saat mengupload file.";

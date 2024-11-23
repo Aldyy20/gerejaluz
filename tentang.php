@@ -216,11 +216,12 @@
 
 			<?php
 			// Query untuk mengambil data dari tabel tbl_statistik dengan kolom kode, kategori, dan jumlah
-			$sql2 = "SELECT katagori, jumlah FROM tbl_jemaat WHERE katagori IN ('Pendeta', 'Jemaat Pria', 'Jemaat Wanita', 'Total Jemaat')";
+			$sql2 = "SELECT katagori, jumlah FROM tbl_jemaat WHERE katagori IN ('Pendeta', 'Jemaat Pria', 'Jemaat Wanita', 'Jumlah KK')";
 			$result2 = $konek->query($sql2);
 
 			// Inisialisasi variabel dengan nilai default 0
 			$pendeta = 0;
+			$jumlahkk = 0;
 			$jemaatpria = 0;
 			$jemaatwanita = 0;
 			$jumlahjemaat = 0;
@@ -239,12 +240,15 @@
 						case 'Jemaat Wanita':
 							$jemaatwanita = $row2['jumlah'];
 							break;
-						case 'Total Jemaat':
-							$jumlahjemaat = $row2['jumlah'];
+						case 'Jumlah KK':
+							$jumlahkk = $row2['jumlah'];
 							break;
 					}
 				}
+				// Hitung total jemaat
+				$jumlahjemaat = $jemaatpria + $jemaatwanita;
 			}
+
 			?>
 			<!-- Milestone -->
 			<div class="col-lg-3 milestone_col">
@@ -252,6 +256,15 @@
 					<div class="milestone_icon"><img src="images/pendeta.svg" alt=""></div>
 					<div class="milestone_counter" data-end-value="<?php echo htmlspecialchars($pendeta); ?>">0</div>
 					<div class="milestone_text">Pendeta</div>
+				</div>
+			</div>
+
+			<!-- Milestone -->
+			<div class="col-lg-3 milestone_col">
+				<div class="milestone text-center">
+					<div class="milestone_icon"><img src="images/kk.svg" alt=""></div>
+					<div class="milestone_counter" data-end-value="<?php echo htmlspecialchars($jumlahkk); ?>">0</div>
+					<div class="milestone_text">Kepala Keluarga</div>
 				</div>
 			</div>
 

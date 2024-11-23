@@ -74,15 +74,6 @@
 			<!-- Sidebar -->
 			<div class="col-lg-4">
 				<div class="sidebar">
-
-					<!-- Search
-					<div class="sidebar_search">
-						<form action="#" id="sidebar_search_form" class="sidebar_search_form">
-							<input type="text" class="search_input" placeholder="Search" required="required">
-							<button class="search_button"><img src="images/search.png" alt=""></button>
-						</form>
-					</div> -->
-
 					<!-- Categories -->
 					<div class="sidebar_categories sidebar_section">
 						<div class="sidebar_section_title">

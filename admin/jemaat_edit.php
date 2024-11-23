@@ -27,7 +27,7 @@ $data  = mysqli_fetch_array($sqlku);
                 <div class="form-group row has-success">
                     <label class="col-sm-2 form-control-label">Katagori *</label>
                     <div class="col-sm-10">
-                        <input type="text" name="txtkategori" value="<?php echo $data['katagori'] ?>" class="form-control is-valid" placeholder="Katagori">
+                        <input type="text" name="txtkategori" value="<?php echo $data['katagori'] ?>" class="form-control is-valid" placeholder="Katagori" readonly>
                     </div>
                 </div>
                 <div class="form-group row has-success">

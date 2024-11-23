@@ -19,18 +19,14 @@ include 'header.php';
       <div class="col-lg-4">
         <!-- Monthly Usage-->
         <?php
-        $sql2 = "SELECT katagori, jumlah FROM tbl_jemaat WHERE katagori IN ('Total Jemaat')";
+        // Mengambil jumlah jemaat pria dan wanita
+        $sql2 = "SELECT SUM(jumlah) AS total_jemaat FROM tbl_jemaat WHERE katagori IN ('Jemaat Pria', 'Jemaat Wanita')";
         $result2 = $konek->query($sql2);
         $jumlahjemaat = 0;
         if ($result2->num_rows > 0) {
-          // Ambil setiap baris hasil query dan perbarui nilai sesuai dengan kategorinya
-          while ($row2 = $result2->fetch_assoc()) {
-            switch ($row2['katagori']) {
-              case 'Total Jemaat':
-                $jumlahjemaat = $row2['jumlah'];
-                break;
-            }
-          }
+          // Ambil hasil query
+          $row2 = $result2->fetch_assoc();
+          $jumlahjemaat = $row2['total_jemaat'];
         }
         ?>
         <div class="card data-usage">

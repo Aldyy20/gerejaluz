@@ -13,14 +13,17 @@
 		<div class="owl-carousel owl-theme home_slider">
 			<!-- Slider Item -->
 			<div class="owl-item">
-				<div class="home_slider_background" style="background-image:url(img/slide/gereja.jpg)"></div>
+				<div class="home_slider_background" style="background-image:url(img/slide/gereja.png)"></div>
 				<div class="home_content">
 					<div class="container">
 						<div class="row">
 							<div class="col">
 								<div class="home_content_inner">
 									<div class="home_title">
-										<h1 class="outlined-title">GMIT LUZ FATUKOA</h1>
+										<h1 class="outlined-title">
+											GMIT LUZ<br>
+											<span class="large-text">FATUKOA</span>
+										</h1>
 									</div>
 									<div class="home_text">
 										<!-- <p>GEREJA GMIT MERUPAKAN GERAJA YANG MEMILIKI JEMAAT </p> -->
@@ -37,14 +40,17 @@
 
 			<!-- Slider Item -->
 			<div class="owl-item">
-				<div class="home_slider_background" style="background-image:url(img/slide/berita.jpg)"></div>
+				<div class="home_slider_background" style="background-image:url(img/slide/berita.png)"></div>
 				<div class="home_content">
 					<div class="container">
 						<div class="row">
 							<div class="col">
 								<div class="home_content_inner">
 									<div class="home_title">
-										<h1 class="outlined-title">BERITA GEREJA/PELAYANAN</h1>
+										<h1 class="outlined-title">
+											WARTA<br>
+											<span class="large-text">PELAYANAN</span>
+										</h1>
 									</div>
 									<div class="home_text">
 										<p></p>
@@ -61,14 +67,17 @@
 
 			<!-- Slider Item -->
 			<div class="owl-item">
-				<div class="home_slider_background" style="background-image:url(img/slide/profil.jpg)"></div>
+				<div class="home_slider_background" style="background-image:url(img/slide/profil.png)"></div>
 				<div class="home_content">
 					<div class="container">
 						<div class="row">
 							<div class="col">
 								<div class="home_content_inner">
 									<div class="home_title">
-										<h1 class="outlined-title">PROFIL GEREJA</h1>
+										<h1 class="outlined-title">
+											PROFIL<br>
+											<span class="large-text">GEREJA</span>
+										</h1>
 									</div>
 									<div class="home_text">
 										<p>..</p>
