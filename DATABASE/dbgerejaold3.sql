@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 23, 2024 at 08:23 AM
+-- Generation Time: Nov 21, 2024 at 11:22 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -72,7 +72,7 @@ INSERT INTO `tbl_file` (`kode`, `kategori`, `judul`, `konten`, `tgl_posting`, `u
 (3, 'IBADAH RUMAH TANGGA', 'Jadwal Ibadah Rumah Tangga', '', '2018-09-16', 'Admin', 'Akif', ''),
 (4, 'IBADAH PEMUDA', 'Jadwal Ibadah Pemuda', '', '2018-09-16', 'Admin', 'Akif', ''),
 (58, 'IBADAH KAUM BAPAK', 'Ibadah Kaum Bapak', '', '2018-09-16', 'Admin', 'Akif', ''),
-(59, 'IBADAH KAUM  IBU', 'Ibadah Kaum Ibu', '<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\">\r\n	<tbody>\r\n		<tr>\r\n			<td>Jadwal</td>\r\n			<td>Rayon</td>\r\n		</tr>\r\n		<tr>\r\n			<td>jam 08:00-selesai</td>\r\n			<td>rayon di rumah rian</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>&nbsp;</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n', '2018-09-16', 'Admin', 'Aktif', ''),
+(59, 'IBADAH KAUM  IBU', 'Ibadah Kaum Ibu', '', '2018-09-16', 'Admin', 'Aktif', ''),
 (60, 'IBADAH LANSIA', 'Jadwal Ibadah Lansia', '', '2018-09-17', 'Admin', 'Aktif', ''),
 (61, 'SEKOLAH MINGGU', 'Jadwal Sekolah Minggu', ' ', '2024-11-02', 'Admin', 'Aktif', '');
 
@@ -119,7 +119,7 @@ INSERT INTO `tbl_jemaat` (`kode`, `katagori`, `jumlah`) VALUES
 (1, 'Pendeta', 1),
 (2, 'Jemaat Pria', 411),
 (3, 'Jemaat Wanita', 442),
-(4, 'Jumlah KK', 203);
+(4, 'Total Jemaat', 853);
 
 -- --------------------------------------------------------
 
@@ -163,10 +163,10 @@ CREATE TABLE `tbl_mjh` (
 
 INSERT INTO `tbl_mjh` (`kode`, `nama`, `jabatan`, `foto`) VALUES
 (1, 'Pnt. Allan Leonard Nau', 'Wakil Ketua Majelis', 'allan.jpg'),
-(2, 'Pnt. Cengtya, S.Si.', 'Sekretaris 1', 'cengtya3.jpg'),
+(2, 'Pnt. Cengtya, S.Si.', 'Sekretaris 1', 'cengtya.jpg'),
 (3, 'Pnt. Gregorius Bana, M.Pd.', 'Sekretaris 2', 'gregorius.jpg'),
 (4, 'Pnt. Evi Suryani Kolis-Naklui', 'Bendahara 1', 'evi.jpg'),
-(5, 'Pnt. Aksaribka Nau, S.E.', 'Bendahara 2', 'aksaribka2.jpg');
+(5, 'Pnt. Aksaribka Nau, S.E.', 'Bendahara 2', 'aksaribka.jpg');
 
 -- --------------------------------------------------------
 
@@ -185,7 +185,28 @@ CREATE TABLE `tbl_pendeta` (
 --
 
 INSERT INTO `tbl_pendeta` (`kode`, `nama`, `foto`) VALUES
-(1, 'Pdt. Marlin Ellen Pie Saiya-Bani, S.Th.', 'pendeta.png');
+(1, 'Pdt. Marlin Ellen Pie Saiya-Bani, S.Th.', 'pendeta1.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_statistik`
+--
+
+CREATE TABLE `tbl_statistik` (
+  `kode` int(11) NOT NULL,
+  `pendeta` int(10) DEFAULT NULL,
+  `jemaatpria` int(10) DEFAULT NULL,
+  `jemaatwanita` int(10) DEFAULT NULL,
+  `jumlahjemaat` int(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_statistik`
+--
+
+INSERT INTO `tbl_statistik` (`kode`, `pendeta`, `jemaatpria`, `jemaatwanita`, `jumlahjemaat`) VALUES
+(1, 1, 100, 100, 200);
 
 -- --------------------------------------------------------
 
@@ -271,6 +292,12 @@ ALTER TABLE `tbl_pendeta`
   ADD PRIMARY KEY (`kode`);
 
 --
+-- Indexes for table `tbl_statistik`
+--
+ALTER TABLE `tbl_statistik`
+  ADD PRIMARY KEY (`kode`);
+
+--
 -- Indexes for table `tbl_total`
 --
 ALTER TABLE `tbl_total`
@@ -327,6 +354,12 @@ ALTER TABLE `tbl_mjh`
 --
 ALTER TABLE `tbl_pendeta`
   MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `tbl_statistik`
+--
+ALTER TABLE `tbl_statistik`
+  MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_user`
