@@ -40,9 +40,10 @@ $data  = mysqli_fetch_array($sqlku);
 					<div class="news_post">
 						<div class="news_image">
 							<p>Tanggal Posting : <?php echo $data['tgl_posting']; ?> Post : <?php echo $data['user']; ?></p>
-
 						</div>
-						<p> <?php echo $data['konten']; ?></p>
+						<div class="news_content">
+							<p><?php echo $data['konten']; ?></p>
+						</div>
 					</div>
 				</div>
 			</div>

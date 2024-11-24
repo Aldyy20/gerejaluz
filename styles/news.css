@@ -715,10 +715,20 @@ section
 {
 	width: 100%;
 	background: #f5f7fa;
+	/* Aturan CSS untuk kontainer berita */
+	max-width: 100%; /* Membuat lebar maksimum 100% dari kontainer induk */
+	margin: 0 auto; /* Mengatur margin otomatis untuk pusat */
+	padding: 15px; /* Menambahkan padding */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan untuk efek visual */
 }
 .news_post:not(:last-child)
 {
 	margin-bottom: 15px;
+}
+.news_content p {
+	margin: 0; /* Menghapus margin default */
+	width: 100%; /* Membuat lebar 100% */
+	word-wrap: break-word; /* Memastikan kata panjang terputus */
 }
 .news_image
 {

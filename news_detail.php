@@ -36,23 +36,17 @@ $data  = mysqli_fetch_array($sqlku);
 			<!-- News Posts -->
 			<div class="col-lg-8">
 				<div class="news_posts">
-
 					<!-- News Post -->
-
-
-
-
 					<div class="news_post">
 						<div class="news_image">
 							<p>Tanggal Posting : <?php echo $data['tgl_posting']; ?> Post : <?php echo $data['user']; ?></p>
 							<img src="img/blog/<?php echo $data['gambar']; ?>" alt="">
 
 						</div>
-						<p> <?php echo $data['konten']; ?></p>
+						<div class="news_content">
+							<p><?php echo $data['konten']; ?></p>
+						</div>
 					</div>
-
-
-
 				</div>
 			</div>
 

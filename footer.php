@@ -67,6 +67,7 @@
 	<!-- <script src="plugins/parallax-js-master/parallax.min.js"></script> -->
 	<script src="js/elements.js"></script>
 	<script src="js/services.js"></script>
+	<script src="js/table.js"></script>
 	</body>
 
 	</html>
