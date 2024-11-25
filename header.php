@@ -5,7 +5,8 @@
 <head>
 
 	<meta charset="utf-8">
-	<link href="icon.png" rel="icon">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<meta name="description" content="Pada zaman Hindia-Belanda, leluhur kami diajak oleh Raja Kupang untuk berbakti di Amnesi yang sekarang adalah gereja Rehobot Bakunase. Hal ini terbukti dalam sebuah dokumen yang masih tersimpan, yakni surat baptis dari Bapak Titus Nau (Alm) yang dibaptis pada tanggal 12 Februari 1914 di gereja Amnesi. Kemudian Bapak Titus Nau (Alm) mengajak saudara, keluarga dan teman-temannya untuk setiap hari Minggu ikut beribadah di gereja Amnesi. Beberapa dari mereka yang turut beribadah kemudian dibaptiskan di gereja Amnesi antara lain:">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!-- <meta name="description" content="CareMed demo project"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
