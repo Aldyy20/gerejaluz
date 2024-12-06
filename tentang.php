@@ -3,7 +3,7 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="styles/elements.css">
 	<link rel="stylesheet" type="text/css" href="styles/elements_responsive.css">
-	<title>Profil - Gereja Injil Kristus Indonesia</title>
+	<title>Profil - GMIT Luz Fatukoa</title>
 </head>
 
 <div class="home">
